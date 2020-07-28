@@ -1,0 +1,328 @@
+@import "../../utils/dark/index";
+/* h1-h3 */
+#write {
+  h1,
+  h2,
+  h3 {
+    font-style: paragraph(h-style);
+  }
+
+  h1,
+  h2 {
+    text-align: paragraph(h12-align);
+    @include mg-y(2rem, 1rem);
+  }
+
+  h1 {
+    font-size: paragraph(h1-size);
+  }
+
+  h2 {
+    font-size: paragraph(h2-size);
+
+    &:after {
+      content: "";
+      display: block;
+      width: calcRem(100px);
+      height: 1px;
+      margin: 0 auto;
+      border-bottom: 1px solid paragraph(h2-bd);
+    }
+  }
+
+  h3 {
+    font-size: paragraph(h3-size);
+  }
+}
+
+/* paragraph */
+p {
+  @include mg-y(0, 0.5rem);
+}
+
+/* ul ol */
+ul,
+ol {
+  padding-left: 1.75rem;
+
+  &:first-child {
+    margin-top: 0;
+  }
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+/* blockquote */
+blockquote {
+  padding: 0.5rem 1rem;
+  border-left: paragraph(bq-bd-width) solid paragraph(bq-bd);
+  background-color: paragraph(bq-bg);
+  border-radius: global(bd-radius-4);
+
+  // code {
+  //   background-color: transparent;
+  // }
+}
+
+/* horizontal line */
+hr {
+  @include mg-y(2rem, 2rem);
+  border-top: 2px paragraph(hr-shape) paragraph(hr-bd);
+}
+
+/* table */
+.md-table-fig {
+  .md-table {
+    border: 1px solid paragraph(table-bd) {
+      radius: global(bd-radius-6);
+      collapse: separate;
+    }
+    overflow: hidden;
+
+    th,
+    td {
+      padding: 10px 16px;
+      border: {
+        top: 1px solid paragraph(table-bd);
+        left: 1px solid paragraph(table-bd);
+      }
+
+      &:first-child {
+        border-left: 0;
+      }
+    }
+
+    thead {
+      background-color: paragraph(table-thead-bg);
+      color: paragraph(table-thead-color);
+    }
+
+    caption + thead tr:first-child th,
+    caption + thead tr:first-child td,
+    colgroup + thead tr:first-child th,
+    colgroup + thead tr:first-child td,
+    thead + tbody tr:first-child th,
+    thead + tbody tr:first-child td,
+    thead:first-child tr:first-child th,
+    thead:first-child tr:first-child td {
+      border-top: 0;
+    }
+
+    tbody + tbody {
+      border-top: 2px solid paragraph(table-bd);
+    }
+  }
+
+  .md-table-edit {
+    background-color: paragraph(table-edit-bg);
+
+    .btn-default:hover {
+      background-color: global(hover-bg);
+    }
+
+    .md-table-resize-popover {
+      box-shadow: global(box-shadow);
+      border: none;
+      padding: 0;
+      background-color: transparent;
+
+      .arrow {
+        top: -10px;
+
+        &::after {
+          border-bottom-color: paragraph(table-edit-bg);
+        }
+      }
+
+      .md-reset {
+        border-radius: global(bd-radius-6);
+        background-color: global(dropdown-bg);
+
+        input {
+          color: global(color) !important;
+
+          &#md-grid-width,
+          &#md-grid-height {
+            text-align: center;
+          }
+        }
+      }
+
+      .popover-title {
+        border-top: global(bd-1-dark);
+      }
+    }
+  }
+}
+#table-insert-dialog {
+  .modal-content {
+    background-color: global(dropdown-bg);
+    border: none {
+      radius: global(bd-radius-6);
+    }
+    .btn-default:hover {
+      background-color: global(hover-bg);
+    }
+  }
+}
+
+/* yaml front matter */
+#write pre.md-meta-block {
+  background: paragraph(front-matter-bg);
+  color: paragraph(front-matter-color);
+  box-shadow: global(box-shadow);
+  border: 0 {
+    radius: global(bd-radius-6);
+  }
+  line-height: 1.3rem;
+  padding: 0.5rem 1.5rem;
+  @include mg-y(-1rem, 2rem);
+}
+
+/* table of contents */
+.md-toc {
+  margin-bottom: calcRem(20px);
+}
+
+/* task list */
+.md-task-list-item {
+  > input {
+    &::before {
+      content: "";
+      position: absolute;
+      top: -5px;
+      left: -4px;
+      border-radius: paragraph(task-bd-shape);
+      width: 1.1rem;
+      height: 1.1rem;
+      border: 1px solid paragraph(task-bd);
+      background: paragraph(task-bg);
+      transition: background-color 200ms ease-in-out;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 2px;
+      left: 1px;
+      width: 0.6rem;
+      height: 0.3rem;
+      border: 2px solid paragraph(task-done-icon) {
+        top: 0;
+        right: 0;
+      }
+      transform: rotate(-45deg);
+      opacity: 0;
+      transition: opacity 200ms ease-in-out;
+    }
+
+    &:checked::before {
+      background-color: paragraph(task-done-bg);
+      border: none;
+    }
+
+    &:checked::after {
+      opacity: 1;
+    }
+  }
+
+  &.task-list-done {
+    text-decoration: line-through;
+    color: paragraph(task-done-color);
+  }
+}
+
+/* footnote */
+.footnotes {
+  font-size: 1rem;
+}
+
+/* math,html block common */
+.mathjax-block,
+.md-htmlblock {
+  box-shadow: global(box-shadow);
+  border-radius: global(bd-radius-6);
+  background-color: paragraph(math-html-block-bg);
+
+  &[contenteditable="false"] {
+    &:active,
+    &:focus {
+      box-shadow: global(box-shadow);
+    }
+  }
+
+  &:hover {
+    .md-rawblock-container,
+    .md-rawblock-tooltip {
+      background-color: paragraph(math-html-block-bg);
+      animation: showRawBlockTooltip 0s linear;
+    }
+
+    .md-rawblock-container {
+      border-radius: global(bd-radius-6) 0 global(bd-radius-6)
+        global(bd-radius-6);
+    }
+  }
+
+  .md-rawblock-control {
+    background-color: paragraph(math-html-block-bg);
+  }
+
+  .md-rawblock-tooltip {
+    background-color: paragraph(math-html-block-bg);
+    animation: showRawBlockTooltip 0s linear;
+    border-radius: global(bd-radius-4) global(bd-radius-4) 0 0;
+  }
+}
+
+// math block
+.mathjax-block {
+  .md-mathblock-panel {
+    .code-tooltip {
+      &[contenteditable="false"] {
+        box-shadow: none;
+      }
+    }
+
+    .md-rawblock-before {
+      padding-top: 6px;
+      border-top-left-radius: global(bd-radius-6);
+    }
+
+    .md-rawblock-after {
+      padding-bottom: 6px;
+    }
+
+    .md-rawblock-input {
+      .cm-s-inner {
+        .CodeMirror-lines {
+          color: paragraph(math-block-color);
+        }
+
+        .CodeMirror-gutters {
+          background-color: paragraph(math-html-block-bg);
+        }
+      }
+    }
+  }
+
+  .md-math-container {
+    @include pd-y(10px, 10px);
+  }
+}
+
+// html block
+.md-htmlblock {
+  .md-htmlblock-panel {
+    border: {
+      radius: global(bd-radius-6);
+      top-right-radius: 0;
+    }
+    @include pd-x(6px, 6px);
+
+    .md-rawblock-input {
+      @include pd-y(14px, 10px);
+    }
+  }
+}

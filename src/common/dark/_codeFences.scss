@@ -1,0 +1,108 @@
+@import "../../utils/dark/index";
+/* code fences */
+.md-fences {
+  font-family: global(sans-serif);
+  background-color: codeFences(bg);
+  @include pd-y(6px, 6px);
+  @include pd-x(10px, 10px);
+  box-shadow: global(box-shadow);
+  margin-bottom: calcRem(40px);
+  border: none {
+    radius: global(bd-radius-6);
+  }
+
+  &[contenteditable="false"] {
+    &:active,
+    &:focus {
+      box-shadow: global(box-shadow);
+    }
+  }
+
+  .code-tooltip {
+    background-color: codeFences(bg);
+    border-radius: global(bd-radius-4);
+  }
+
+  span {
+    color: codeFences(normal-color);
+  }
+
+  .code-tooltip {
+    .ty-input {
+      color: codeFences(code-tooltip-color);
+      font-weight: 500;
+    }
+  }
+}
+.ty-show .autoComplt-list li.active {
+  background-color: global(hover-bg);
+}
+
+/* code container */
+.cm-s-inner {
+  background-color: codeFences(bg);
+
+  .CodeMirror-gutters {
+    background-color: codeFences(bg);
+    border: none;
+  }
+
+  .CodeMirror-guttermarker,
+  .CodeMirror-guttermarker-subtle,
+  .CodeMirror-linenumber {
+    color: codeFences(linenumber-color);
+  }
+
+  .CodeMirror-cursor {
+    border-left: 1px solid codeFences(cursor-color) !important;
+  }
+
+  div.CodeMirror-selected {
+    background: rgba(255, 255, 255, 0.15);
+  }
+
+  &.CodeMirror-focused {
+    div.CodeMirror-selected {
+      background: rgba(255, 255, 255, 0.1);
+    }
+  }
+
+  .CodeMirror-line {
+    &::selection,
+    > span::selection,
+    > span > span::selection {
+      background-color: codeFences(text-selected-bg);
+    }
+  }
+
+  .CodeMirror-activeline-background {
+    background: rgba(0, 0, 0, 0);
+  }
+
+  .CodeMirror-matchingbracket {
+    text-decoration: underline;
+    color: white !important;
+  }
+  .CodeMirror-selected,
+  .CodeMirror-selectedtext {
+    background-color: codeFences(code-selected-bg) !important;
+  }
+}
+
+/* code fences color */
+@each $key, $value in $code-color {
+  @if $key == error {
+    .cm-s-inner .cm-#{$key} {
+      color: $value !important;
+      background-color: #ec5f67 !important;
+    }
+  } @else if $key == bracket {
+    .cm-s-inner .cm-tag.cm-#{$key} {
+      color: $value !important;
+    }
+  } @else {
+    .cm-s-inner .cm-#{$key} {
+      color: $value !important;
+    }
+  }
+}

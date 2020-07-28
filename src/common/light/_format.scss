@@ -1,0 +1,60 @@
+@import "../../utils/light/index";
+/* strong */
+strong {
+  @include format-bg-font(strong-bg, strong-color);
+}
+
+/* emphasis */
+em {
+  @include format-bg-font(emphasis-bg, emphasis-color);
+}
+
+/* underline */
+u {
+  @include format-bg-font(u-bg, u-color);
+  text-decoration: none;
+  border-bottom: 2px solid format(u-bd);
+  padding-bottom: 1px;
+}
+
+/* code */
+code {
+  @include format-bg-font(code-bg, code-color);
+  font: {
+    family: global(sans-serif);
+    size: 1rem;
+    weight: 500;
+  }
+  margin: 0 2px;
+  padding: 3px 4px 1px;
+  border-radius: global(bd-radius-4);
+}
+
+/* strike */
+del {
+  @include format-bg-font(strike, strike-color);
+  text-decoration: line-through;
+}
+
+/* hightlight */
+mark {
+  @include format-bg-font(mark, mark-color);
+  font-weight: 500;
+  padding: 1px 5px 2px;
+  border-radius: 2px;
+}
+
+/* hyperlink */
+a {
+  @include format-bg-font(hyperlink-bg, hyperlink-color);
+  font-weight: 600;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+
+  img {
+    border: none;
+  }
+}

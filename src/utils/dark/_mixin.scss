@@ -1,0 +1,66 @@
+// 1rem = 19px
+@function calcRem($val) {
+  @return $val / global(root-size) + rem;
+}
+
+// $global
+@function global($key) {
+  @return map-get($global, $key);
+}
+
+// $code-fences
+@function codeFences($key) {
+  @return map-get($code-fences, $key);
+}
+
+// $format
+@function format($key) {
+  @return map-get($format, $key);
+}
+
+// $paragraph
+@function paragraph($key) {
+  @return map-get($paragraph, $key);
+}
+
+// $ui-control
+@function uiControl($key) {
+  @return map-get($ui-control, $key);
+}
+
+// format: color and background
+@mixin format-bg-font($bg, $color) {
+  $format-bg: format($bg);
+  $format-color: format($color);
+  background-color: $format-bg;
+  color: $format-color;
+}
+
+// x,y padding and margin
+@mixin pd-x($left, $right) {
+  padding: {
+    left: $left;
+    right: $right;
+  }
+}
+
+@mixin pd-y($top, $bottom) {
+  padding: {
+    top: $top;
+    bottom: $bottom;
+  }
+}
+
+@mixin mg-x($left, $right) {
+  margin: {
+    left: $left;
+    right: $right;
+  }
+}
+
+@mixin mg-y($top, $bottom) {
+  margin: {
+    top: $top;
+    bottom: $bottom;
+  }
+}

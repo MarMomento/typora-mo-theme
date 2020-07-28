@@ -1,0 +1,307 @@
+@import "../../utils/light/index";
+/* scrollbar */
+::-webkit-scrollbar-thumb {
+  background: uiControl(sb-bg) !important;
+  border-radius: global(bd-radius-4);
+}
+
+/* find dialog */
+#typora-quick-open {
+  background-color: global(dropdown-bg);
+  color: uiControl(qo-color);
+
+  .typora-quick-open-item.active {
+    background-color: global(hover-bg) !important;
+  }
+
+  .ty-quick-open-category-title {
+    border-top: global(bd-1-dark) !important;
+  }
+}
+
+/* modal dialog */
+#common-dialog {
+  .modal-dialog {
+    .modal-content {
+      box-shadow: global(box-shadow);
+      background-color: uiControl(m-d-bg);
+      border: none {
+        radius: global(bd-radius-6);
+      }
+
+      .modal-footer {
+        .btn-default {
+          &:hover {
+            background-color: global(hover-bg) !important;
+          }
+        }
+      }
+    }
+  }
+}
+
+/* preferences */
+.ty-preferences {
+  font-family: global(sans-serif);
+  color: uiControl(pf-color);
+
+  .window-header h2 {
+    font-size: 1.6rem;
+  }
+
+  .sidebar {
+    font-size: 1.4rem;
+
+    .nav-group-item.active,
+    .nav-group-item:active {
+      color: uiControl(pf-nav-item-active-color);
+      background-color: uiControl(pf-nav-item-active-bg);
+    }
+  }
+}
+
+/* sidebar includes file-tree,articles and outline*/
+.html-for-mac #typora-sidebar {
+  box-shadow: global(box-shadow);
+}
+
+/* focus mode/typewriter mode notification  */
+#md-notification {
+  background-color: global(dropdown-bg) !important;
+
+  #ty-surpress-mode-warning-close-btn {
+    &:hover {
+      background-color: global(hover-bg) !important;
+    }
+  }
+}
+
+/* Unibody sidebar */
+#megamenu-menu-sidebar {
+  color: #282c34;
+  font-size: 1rem;
+  #megamenu-menu-list {
+    border-top-color: rgba(171, 192, 208, 0.1);
+    background-color: #222526;
+    li {
+      font-size: 0.8rem;
+
+      a {
+        color: #abc0d0 !important;
+        &.active,
+        &:hover {
+          background-color: rgb(62, 66, 73) !important;
+        }
+
+        &#m-saved {
+          background-color: transparent !important;
+        }
+      }
+    }
+  }
+}
+
+.megamenu-opened .megamenu-menu {
+  left: 0;
+}
+
+#megamenu-content {
+  color: #000;
+}
+
+/* sidebar */
+#typora-sidebar {
+  background-color: uiControl(sidebar-menu-bg);
+  border-right: global(bd-1-dark);
+
+  #sidebar-loading-template.file-list-item {
+    border-bottom: transparent !important;
+    background-color: rgba(171, 192, 208, 0.1);
+  }
+
+  .info-panel-tab-wrapper {
+    .info-panel-tab {
+      &:hover {
+        color: inherit;
+      }
+
+      .info-panel-tab-border {
+        background-color: uiControl(sidebar-file-acitve-bd);
+        border-radius: 4px;
+      }
+    }
+  }
+
+  .sidebar-osx-tab {
+    .sidebar-tabs {
+      border-bottom-color: transparent;
+    }
+  }
+
+  #sidebar-content {
+    .file-list-item {
+      border-bottom: global(bd-1-dark);
+    }
+
+    .file-list-item.active {
+      background-color: uiControl(sidebar-file-acitve-bg);
+      border-left: 4px solid uiControl(sidebar-file-acitve-bd);
+    }
+
+    .ty-sidebar-search-panel {
+      border-bottom: global(bd-1-dark);
+
+      .searchpanel-search-option-btn {
+        background-color: global(dropdown-bg);
+      }
+    }
+
+    .sidebar-content-content {
+      .file-node-content {
+        line-height: calcRem(22px);
+        font-size: calcRem(16px);
+        color: global(color) !important;
+      }
+
+      .file-tree-node {
+        &:not(.file-node-root):hover > .file-node-background {
+          border-left: 4px solid uiControl(sidebar-file-acitve-bd);
+          background-color: uiControl(sidebar-file-acitve-bg);
+        }
+
+        &.active {
+          > .file-node-background {
+            border-color: uiControl(sidebar-file-acitve-bd);
+            background-color: uiControl(sidebar-file-acitve-bg);
+          }
+        }
+      }
+
+      #file-library-list-children {
+        .file-library-file-node {
+          &:hover {
+            border-left: 4px solid uiControl(sidebar-file-acitve-bd);
+            background-color: uiControl(sidebar-file-acitve-bg);
+          }
+        }
+      }
+    }
+
+    #outline-content {
+      .no-collapse-outline .outline-item {
+        line-height: calcRem(22px);
+        font-size: calcRem(16px);
+      }
+      .outline-expander:before {
+        color: inherit;
+        font-size: 14px;
+        top: auto;
+        content: "\f0da";
+        font-family: FontAwesome;
+      }
+
+      .outline-expander:hover:before,
+      .outline-item-open > .outline-item > .outline-expander:before {
+        content: "\f0d7";
+      }
+
+      .outline-item:hover {
+        background-color: global(hover-bg) !important;
+      }
+    }
+  }
+
+  #ty-sidebar-footer {
+    border-top: global(bd-1-dark);
+
+    .sidebar-footer-item:hover {
+      background-color: global(hover-bg) !important;
+    }
+
+    #sidebar-files-menu {
+      box-shadow: global(box-shadow);
+    }
+  }
+}
+
+/* dropdown menu */
+.dropdown-menu {
+  background-color: global(dropdown-bg);
+  box-shadow: global(box-shadow);
+  border-top: global(bd-1-dark);
+
+  > .show + .menuitem-group-label.show {
+    border-top: global(bd-1-dark) !important;
+  }
+
+  > .active > a,
+  > li > a:hover,
+  .menu-style-btn.active {
+    background-color: global(hover-bg) !important;
+  }
+
+  li a {
+    color: global(color) !important;
+
+    &:hover {
+      background-color: global(hover-bg) !important;
+    }
+  }
+
+  .divider {
+    border-color: global(dropdown-bg);
+  }
+}
+
+/* sidebar-files-menu,toc-dropmenu,suggest common */
+#sidebar-files-menu,
+#toc-dropmenu,
+.auto-suggest-container {
+  background-color: global(dropdown-bg);
+  box-shadow: global(box-shadow);
+  border: none;
+}
+
+#toc-dropmenu {
+  .outline-item:hover {
+    background-color: global(hover-bg) !important;
+  }
+}
+
+/* emoji,fences,word suggest */
+.auto-suggest-container {
+  @include pd-y(4px, 4px);
+  li {
+    &.active,
+    &:hover {
+      background-color: global(hover-bg) !important;
+    }
+  }
+}
+
+/** source code mode */
+#typora-source {
+  font-family: global(sans-serif);
+  color: #6a6a6a;
+
+  .cm-s-typora-default .cm-header,
+  .cm-s-typora-default .cm-property,
+  .CodeMirror.cm-s-typora-default div.CodeMirror-cursor {
+    color: #428bca;
+  }
+
+  .cm-s-typora-default .cm-atom,
+  .cm-s-typora-default .cm-number {
+    color: #777777;
+  }
+
+  .CodeMirror-selectedtext {
+    background-color: transparent !important;
+  }
+}
+
+.typora-node .file-list-item-parent-loc,
+.typora-node .file-list-item-time,
+.typora-node .file-list-item-summary {
+  font-family: global(serif);
+}

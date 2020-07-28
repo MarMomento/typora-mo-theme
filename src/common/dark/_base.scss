@@ -1,0 +1,45 @@
+@import "../../utils/dark/index";
+html {
+  font-size: global(root-size);
+}
+
+html,
+body {
+  font-family: global(serif);
+  text-align: justify;
+  overflow-x: hidden;
+  color: global(color);
+  background-color: global(bg);
+  -webkit-font-smoothing: antialiased;
+}
+
+content {
+  #write {
+    background-color: global(bg);
+    max-width: global(write-width);
+    margin: 0 auto;
+    padding-bottom: 7.5rem;
+
+    p {
+      word-spacing: 0.05rem;
+    }
+
+    ol {
+      li {
+        padding-left: 0.5rem;
+      }
+    }
+
+    > h1:first-child {
+      font-weight: normal;
+    }
+
+    > h5.md-focus:before {
+      top: 2px;
+    }
+  }
+}
+
+::selection {
+  background-color: global(selected-bg);
+}
