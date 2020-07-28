@@ -12,11 +12,25 @@ The Mo theme references the styles of many other themes, while addressing many s
 
 ## Screenshots
 
+light:
+
 ![img](images/light1.png)
+
+
+
+
 
 ![img](images/light2.png)
 
+
+
+dark:
+
 ![img](images/dark1.png)
+
+
+
+
 
 ![img](images/dark2.png)
 
