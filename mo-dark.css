@@ -357,6 +357,28 @@ hr {
   padding-top: 14px;
   padding-bottom: 10px;
 }
+.on-focus-mode .md-end-block:not(.md-focus):not(.md-focus-container) * {
+  color: #585a5b !important; }
+
+.on-focus-mode .md-end-block:not(.md-focus):not(.md-focus-container) img {
+  opacity: 50%; }
+
+.on-focus-mode .task-list-item:not(.md-focus-container) > input {
+  opacity: 50%; }
+
+.on-focus-mode .md-fences.md-focus .CodeMirror-code > *:not(.CodeMirror-activeline) *,
+.on-focus-mode .CodeMirror.cm-s-inner:not(.CodeMirror-focused) * {
+  color: #585a5b !important; }
+
+.on-focus-mode li[cid]:not(.md-focus-container) {
+  color: #585a5b !important; }
+
+.on-focus-mode #typora-source .CodeMirror-code > *:not(.CodeMirror-activeline) * {
+  color: #585a5b !important; }
+
+.on-focus-mode .md-focus,
+.on-focus-mode .md-focus-container {
+  color: #abc0d0; }
 
 /* strong */
 strong {
