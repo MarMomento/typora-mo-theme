@@ -1,10 +1,11 @@
 // global config
-$serif: "Times New Roman", Times, Georgia, serif;
-$sans-serif: "Fira Code", Consolas, "Lucida Console", "Courier", monospace,
-  "Helvetica Neue", Helvetica, Arial sans-serif;
+$serif: -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Lato, Roboto, "PingFang SC",
+  "Microsoft JhengHei", "Microsoft YaHei", sans-serif;
+$sans-serif: "Fira Code", Consolas, "Lucida Console", "Courier", monospace, "Helvetica Neue",
+  Helvetica, Arial sans-serif;
 $box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
 $global: (
-  root-size: 19px,
+  root-size: 16px,
   serif: $serif,
   sans-serif: $sans-serif,
   write-width: 90%,
@@ -76,36 +77,36 @@ $format: (
 // blockquote, table, task-list etc.
 $paragraph: (
   // h1-h3
-    h-style: italic,
+  h-style: normal,
   h12-align: center,
   h1-size: 3rem,
   h2-size: 2.4rem,
   h3-size: 1.8rem,
   h2-bd: #2f2f2f,
   // blockquote
-    bq-bd-width: 8px,
+  bq-bd-width: 8px,
   bq-bd: rgb(47, 132, 94),
   bq-bg: rgba(66, 185, 131, 0.1),
   // horizontal line
-    hr-shape: dashed,
+  hr-shape: dashed,
   hr-bd: #abb2bf,
   // table
-    table-bd: #ddd,
+  table-bd: #ddd,
   table-thead-bg: #e7ecf3,
   table-thead-color: #000,
   table-edit-bg: #ddd,
   // yaml front matter
-    front-matter-bg: #e7ecf3,
+  front-matter-bg: #e7ecf3,
   front-matter-color: #486491,
   // task list
-    task-bd-shape: 50%,
+  task-bd-shape: 50%,
   task-bd: #737373,
   task-bg: #fff,
   task-done-bg: #67c23a,
   task-done-icon: #fff,
   task-done-color: #999,
   // math,html block
-    math-html-block-bg: #f5f6f7,
+  math-html-block-bg: #f5f6f7,
   math-block-color: #282c34,
   math-linenumber-gutters-bg: #f5f6f7,
   math-selected-bg: #bac6e9
@@ -113,17 +114,17 @@ $paragraph: (
 
 $ui-control: (
   // sidebar
-    sidebar-file-acitve-bd: rgb(47, 132, 94),
+  sidebar-file-acitve-bd: rgb(47, 132, 94),
   sidebar-file-acitve-bg: rgba(66, 185, 131, 0.1),
   sidebar-menu-bg: #fafafa,
   // scrollBar
-    sb-bg: rgba(0, 0, 0, 0.3),
+  sb-bg: rgba(0, 0, 0, 0.3),
   // quick open
-    qo-color: #282c34,
+  qo-color: #282c34,
   // modal dialog
-    m-d-bg: #f5f6f7,
+  m-d-bg: #f5f6f7,
   // preferences
-    pf-color: #282c34,
+  pf-color: #282c34,
   pf-nav-item-active-color: #efefef,
   pf-nav-item-active-bg: rgb(47, 132, 94)
 );

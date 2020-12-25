@@ -72,48 +72,49 @@ hr {
 }
 
 /* table */
-.md-table-fig {
-  .md-table {
-    border: 1px solid paragraph(table-bd) {
-      radius: global(bd-radius-6);
-      collapse: separate;
-    }
-    overflow: hidden;
+table,
+.md-table-fig .md-table {
+  border: 1px solid paragraph(table-bd) {
+    radius: global(bd-radius-6);
+    collapse: separate;
+  }
+  overflow: hidden;
 
-    th,
-    td {
-      padding: 10px 16px;
-      border: {
-        top: 1px solid paragraph(table-bd);
-        left: 1px solid paragraph(table-bd);
-      }
-
-      &:first-child {
-        border-left: 0;
-      }
+  th,
+  td {
+    padding: 10px 16px;
+    border: {
+      top: 1px solid paragraph(table-bd);
+      left: 1px solid paragraph(table-bd);
     }
 
-    thead {
-      background-color: paragraph(table-thead-bg);
-      color: paragraph(table-thead-color);
-    }
-
-    caption + thead tr:first-child th,
-    caption + thead tr:first-child td,
-    colgroup + thead tr:first-child th,
-    colgroup + thead tr:first-child td,
-    thead + tbody tr:first-child th,
-    thead + tbody tr:first-child td,
-    thead:first-child tr:first-child th,
-    thead:first-child tr:first-child td {
-      border-top: 0;
-    }
-
-    tbody + tbody {
-      border-top: 2px solid paragraph(table-bd);
+    &:first-child {
+      border-left: 0;
     }
   }
 
+  thead {
+    background-color: paragraph(table-thead-bg);
+    color: paragraph(table-thead-color);
+  }
+
+  caption + thead tr:first-child th,
+  caption + thead tr:first-child td,
+  colgroup + thead tr:first-child th,
+  colgroup + thead tr:first-child td,
+  thead + tbody tr:first-child th,
+  thead + tbody tr:first-child td,
+  thead:first-child tr:first-child th,
+  thead:first-child tr:first-child td {
+    border-top: 0;
+  }
+
+  tbody + tbody {
+    border-top: 2px solid paragraph(table-bd);
+  }
+}
+
+.md-table-fig {
   .md-table-edit {
     background-color: paragraph(table-edit-bg);
 
@@ -247,8 +248,7 @@ hr {
     }
 
     .md-rawblock-container {
-      border-radius: global(bd-radius-6) 0 global(bd-radius-6)
-        global(bd-radius-6);
+      border-radius: global(bd-radius-6) 0 global(bd-radius-6) global(bd-radius-6);
     }
   }
 

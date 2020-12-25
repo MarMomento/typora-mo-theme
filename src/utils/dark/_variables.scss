@@ -1,10 +1,11 @@
 // global config
-$serif: "Times New Roman", Times, Georgia, serif;
-$sans-serif: "Fira Code", Consolas, "Lucida Console", "Courier", monospace,
-  "Helvetica Neue", Helvetica, Arial sans-serif;
+$serif: -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Lato, Roboto, "PingFang SC",
+  "Microsoft JhengHei", "Microsoft YaHei", sans-serif;
+$sans-serif: "Fira Code", Consolas, "Lucida Console", "Courier", monospace, "Helvetica Neue",
+  Helvetica, Arial sans-serif;
 $box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
 $global: (
-  root-size: 19px,
+  root-size: 16px,
   serif: $serif,
   sans-serif: $sans-serif,
   write-width: 90%,
@@ -77,53 +78,53 @@ $format: (
 // blockquote, table, task-list etc.
 $paragraph: (
   // h1-h3
-    h-style: italic,
+  h-style: normal,
   h12-align: center,
   h1-size: 3rem,
   h2-size: 2.4rem,
   h3-size: 1.8rem,
   h2-bd: rgb(171, 192, 208),
   // blockquote
-    bq-bd-width: 8px,
+  bq-bd-width: 8px,
   bq-bd: rgb(47, 132, 94),
   bq-bg: rgb(34, 37, 38),
   // horizontal line
-    hr-shape: dashed,
+  hr-shape: dashed,
   hr-bd: #abb2bf,
   // table
-    table-bd: rgb(47, 132, 94),
+  table-bd: rgb(47, 132, 94),
   table-thead-bg: rgb(47, 132, 94),
   table-thead-color: #000,
   table-edit-bg: rgb(34, 37, 38),
   // yaml front matter
-    front-matter-bg: rgb(34, 37, 38),
+  front-matter-bg: rgb(34, 37, 38),
   front-matter-color: rgb(134, 165, 195),
   // task list
-    task-bd-shape: 50%,
+  task-bd-shape: 50%,
   task-bd: rgb(171, 192, 208),
   task-bg: rgb(34, 37, 38),
   task-done-bg: #67c23a,
   task-done-icon: #fff,
   task-done-color: #999,
   // math,html block
-    math-html-block-bg: rgb(34, 37, 38),
+  math-html-block-bg: rgb(34, 37, 38),
   math-block-color: #abb2bf
 );
 
 // ui control
 $ui-control: (
   // sidebar
-    sidebar-file-acitve-bd: rgb(47, 132, 94),
+  sidebar-file-acitve-bd: rgb(47, 132, 94),
   sidebar-file-acitve-bg: rgb(34, 37, 38),
   sidebar-menu-bg: #181a1b,
   // scrollBar
-    sb-bg: linear-gradient(to top right, #41b782, #86d169),
+  sb-bg: linear-gradient(to top right, #41b782, #86d169),
   // quick open
-    qo-color: rgb(171, 192, 208),
+  qo-color: rgb(171, 192, 208),
   // modal dialog
-    m-d-bg: rgb(34, 37, 38),
+  m-d-bg: rgb(34, 37, 38),
   // preferences
-    pf-color: #282c34,
+  pf-color: #282c34,
   pf-nav-item-active-color: #efefef,
   pf-nav-item-active-bg: rgb(47, 132, 94)
 );
