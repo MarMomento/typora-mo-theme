@@ -326,3 +326,37 @@ hr {
     }
   }
 }
+
+// focus mode
+.on-focus-mode {
+  .md-end-block:not(.md-focus):not(.md-focus-container) {
+    * {
+      color: global(unfocus) !important;
+    }
+    img{
+      opacity: 50%;
+    }
+  }
+  
+  .task-list-item:not(.md-focus-container)>input {
+    opacity: 50%;
+  }
+  
+  .md-fences.md-focus .CodeMirror-code>*:not(.CodeMirror-activeline) *,
+  .CodeMirror.cm-s-inner:not(.CodeMirror-focused) * {
+    color: global(unfocus) !important;
+  }
+  
+  li[cid]:not(.md-focus-container) {
+    color: global(unfocus) !important;
+  }
+  
+  #typora-source .CodeMirror-code>*:not(.CodeMirror-activeline) * {
+    color: global(unfocus) !important;
+  }
+  
+  .md-focus,
+  .md-focus-container {
+    color: global(color);
+  }
+}
