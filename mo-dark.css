@@ -4,7 +4,7 @@ html {
 
 html,
 body {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Lato, Roboto, "PingFang SC", "Microsoft JhengHei", "Microsoft YaHei", sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, "PingFang SC", "Microsoft YaHei", sans-serif;
   text-align: justify;
   overflow-x: hidden;
   color: #abc0d0;
@@ -413,7 +413,7 @@ u {
 code {
   background-color: rgba(34, 37, 38, 0.05);
   color: #e96900;
-  font-family: "Fira Code", Consolas, "Lucida Console", "Courier", monospace, "Helvetica Neue", Helvetica, Arial sans-serif;
+  font-family: "Fira Code", Consolas, "Lucida Console", "Courier", monospace, "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 1rem;
   font-weight: 500;
   margin: 0 2px;
@@ -453,7 +453,7 @@ a img {
 
 /* code fences */
 .md-fences {
-  font-family: "Fira Code", Consolas, "Lucida Console", "Courier", monospace, "Helvetica Neue", Helvetica, Arial sans-serif;
+  font-family: "Fira Code", Consolas, "Lucida Console", "Courier", monospace, "Helvetica Neue", Helvetica, Arial, sans-serif;
   background-color: #222526;
   padding-top: 6px;
   padding-bottom: 6px;
@@ -657,7 +657,7 @@ a img {
 
 /* preferences */
 .ty-preferences {
-  font-family: "Fira Code", Consolas, "Lucida Console", "Courier", monospace, "Helvetica Neue", Helvetica, Arial sans-serif;
+  font-family: "Fira Code", Consolas, "Lucida Console", "Courier", monospace, "Helvetica Neue", Helvetica, Arial, sans-serif;
   color: #282c34;
 }
 
@@ -878,7 +878,7 @@ a img {
 
 /** source code mode */
 #typora-source {
-  font-family: "Fira Code", Consolas, "Lucida Console", "Courier", monospace, "Helvetica Neue", Helvetica, Arial sans-serif;
+  font-family: "Fira Code", Consolas, "Lucida Console", "Courier", monospace, "Helvetica Neue", Helvetica, Arial, sans-serif;
   color: #6a6a6a;
 }
 
@@ -901,5 +901,5 @@ a img {
 .typora-node .file-list-item-parent-loc,
 .typora-node .file-list-item-time,
 .typora-node .file-list-item-summary {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Lato, Roboto, "PingFang SC", "Microsoft JhengHei", "Microsoft YaHei", sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, "PingFang SC", "Microsoft YaHei", sans-serif;
 }
