@@ -194,8 +194,8 @@ hr {
       top: -5px;
       left: -4px;
       border-radius: paragraph(task-bd-shape);
-      width: 1.1rem;
-      height: 1.1rem;
+      width: 20px;
+      height: 20px;
       border: 1px solid paragraph(task-bd);
       background: paragraph(task-bg);
       transition: background-color 200ms ease-in-out;
@@ -260,8 +260,7 @@ hr {
     }
 
     .md-rawblock-container {
-      border-radius: global(bd-radius-6) 0 global(bd-radius-6)
-        global(bd-radius-6);
+      border-radius: global(bd-radius-6) 0 global(bd-radius-6) global(bd-radius-6);
     }
   }
 
@@ -333,28 +332,28 @@ hr {
     * {
       color: global(unfocus) !important;
     }
-    img{
+    img {
       opacity: 50%;
     }
   }
-  
-  .task-list-item:not(.md-focus-container)>input {
+
+  .task-list-item:not(.md-focus-container) > input {
     opacity: 50%;
   }
-  
-  .md-fences.md-focus .CodeMirror-code>*:not(.CodeMirror-activeline) *,
+
+  .md-fences.md-focus .CodeMirror-code > *:not(.CodeMirror-activeline) *,
   .CodeMirror.cm-s-inner:not(.CodeMirror-focused) * {
     color: global(unfocus) !important;
   }
-  
+
   li[cid]:not(.md-focus-container) {
     color: global(unfocus) !important;
   }
-  
-  #typora-source .CodeMirror-code>*:not(.CodeMirror-activeline) * {
+
+  #typora-source .CodeMirror-code > *:not(.CodeMirror-activeline) * {
     color: global(unfocus) !important;
   }
-  
+
   .md-focus,
   .md-focus-container {
     color: global(color);
